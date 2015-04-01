@@ -21,7 +21,18 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Remove git branch with a database
+
+    rake db:drop_branch
+
+Remove all development and test databases associated with Git branches
+
+    rake db:clean_branches
+
+Remove all development and test databases remaining after removing Git branches
+    
+    rake db:drop_leftovers
+
 
 ## Contributing
 
