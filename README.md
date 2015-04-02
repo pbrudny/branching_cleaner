@@ -1,6 +1,6 @@
 # BranchingCleaner
 
-[![Build Status](https://travis-ci.org/pbrudny/branching_cleaner.png?branch=master)](https://travis-ci.org/pbrudny/branching_cleaner) [![Gem Version](https://badge.fury.io/rb/branching_cleaner.png)](http://badge.fury.io/rb/branching_cleaner) [![Coverage Status](https://coveralls.io/repos/pbrudny/branching_cleaner/badge.svg)](https://coveralls.io/r/pbrudny/branching_cleaner)
+[![Build Status](https://travis-ci.org/pbrudny/branching_cleaner.svg)](https://travis-ci.org/pbrudny/branching_cleaner) [![Gem Version](https://badge.fury.io/rb/branching_cleaner.png)](http://badge.fury.io/rb/branching_cleaner) [![Coverage Status](https://coveralls.io/repos/pbrudny/branching_cleaner/badge.svg)](https://coveralls.io/r/pbrudny/branching_cleaner)
 
 [WIP] If you do database branching the biggest problem you might have is enormous amount of useless databases.
 The purpose of this gem is to clean that mess.
