@@ -21,6 +21,10 @@ Or install it yourself as:
 
     $ gem install branching_cleaner
 
+Add this line to Rakefile
+
+    require 'branching_cleaner/rake_tasks'
+    
 ## Usage
 
 Remove git branch with a database
