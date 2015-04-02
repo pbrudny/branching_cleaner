@@ -20,26 +20,9 @@ module DatabaseBranchingCleaner
 
     attr_accessor :env
 
-    def configuration
-      Rails.configuration.database_configuration[env]
-    end
-
-    def db_core_name
-      configuration['database'].split(current_branch).first
-    end
-
     def db_name(branch)
-      "#{db_core_name}#{branch}"
+      "#{db_core_name}#{env}_#{branch}"
     end
 
-    def connection
-      @connection ||= master_connection
-    end
-
-    def master_connection
-      p = ActiveRecord::Tasks::PostgreSQLDatabaseTasks.new(configuration)
-      p.send 'establish_master_connection'
-      p.connection
-    end
   end
 end

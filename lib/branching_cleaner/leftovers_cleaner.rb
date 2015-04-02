@@ -25,24 +25,6 @@ module DatabaseBranchingCleaner
     def all_databases_from_server
       @databases ||= connection.query('SELECT datname FROM pg_catalog.pg_database').flatten
     end
-
-    def configuration
-      Rails.configuration.database_configuration['development']
-    end
-
-    def db_core_name
-      configuration['database'].split("development_#{current_branch}").first
-    end
-
-    def connection
-      @connection ||= master_connection
-    end
-
-    def master_connection
-      p = ActiveRecord::Tasks::PostgreSQLDatabaseTasks.new(configuration)
-      p.send 'establish_master_connection'
-      p.connection
-    end
   end
 
 end
