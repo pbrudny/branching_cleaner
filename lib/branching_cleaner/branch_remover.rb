@@ -1,4 +1,4 @@
-module DatabaseBranchingCleaner
+module BranchingCleaner
 
   class BranchRemover < Base
 
@@ -15,8 +15,6 @@ module DatabaseBranchingCleaner
     end
 
     private
-
-    attr_accessor :branch
 
     def drop_db(branch)
       BranchCleaner.new(branch).run

@@ -1,4 +1,4 @@
-module DatabaseBranchingCleaner
+module BranchingCleaner
 
   class Base
     protected

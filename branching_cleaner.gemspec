@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = BranchingCleaner::VERSION
   spec.authors       = ['Piotr Brudny']
   spec.email         = ['pbrudny@gmail.com']
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Helps to remove databases which remained after using GIT db branching}
+  spec.description   = %q{If you do database branching the biggest problem you might have is enormous amount of useless databases. The purpose of this gem is to clean that mess.}
   spec.homepage      = ""
   spec.license       = "MIT"
 

@@ -1,4 +1,4 @@
-module DatabaseBranchingCleaner
+module BranchingCleaner
 
   class BranchCleaner < Base
     def initialize(branch)
