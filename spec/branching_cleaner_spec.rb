@@ -5,7 +5,7 @@ describe BranchingCleaner do
 
   describe '#run' do
     it 'fails' do
-      expect(true)
+      pending #nothing yet
     end
   end
 end
