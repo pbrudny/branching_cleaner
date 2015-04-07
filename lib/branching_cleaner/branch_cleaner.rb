@@ -1,3 +1,5 @@
+require_relative 'database_remover'
+
 module BranchingCleaner
 
   class BranchCleaner < Base
@@ -6,7 +8,7 @@ module BranchingCleaner
     end
 
     def run
-      %w(development test).each { |env| DatabaseRemover.new(env).drop(branch) }
+      %w(development test).each { |env| BranchingCleaner::DatabaseRemover.new(env).drop(branch) }
     end
 
     private

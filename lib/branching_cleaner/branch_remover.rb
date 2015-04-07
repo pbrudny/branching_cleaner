@@ -5,12 +5,7 @@ module BranchingCleaner
     def drop_current
       branch = current_branch
       drop_db(branch)
-      switch_to_master_branch
-      drop_branch(branch)
-    end
-
-    def drop(branch)
-      drop_db(branch)
+      GIT::switch_to_master_branch
       drop_branch(branch)
     end
 
@@ -21,7 +16,7 @@ module BranchingCleaner
     end
 
     def drop_branch(branch)
-      `git branch -D #{branch}`
+      GIT::drop_branch(branch)
       puts "Branch '#{branch}' removed"
     end
   end

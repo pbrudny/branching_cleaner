@@ -12,7 +12,7 @@ module BranchingCleaner
     private
 
     def branches_to_drop_database
-      @branches ||=`git branch`.split - ['master', '*', current_branch]
+      @branches ||= GIT::branches.split - ['master', '*', current_branch]
     end
   end
 
