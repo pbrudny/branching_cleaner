@@ -9,7 +9,7 @@ module BranchingCleaner
       end
 
       def branches
-        %w('feature_branch' 'another_feature_branch')
+        'feature_branch another_feature_branch'
       end
 
       def current_branch

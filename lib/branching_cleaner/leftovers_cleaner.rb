@@ -3,7 +3,7 @@ module BranchingCleaner
   class LeftoversCleaner < Base
 
     def run
-      switch_to_master_branch
+      GIT::switch_to_master_branch
       databases_to_remove.each do |database|
         puts "* Removing '#{database}'"
         connection.drop_database(database)
@@ -23,7 +23,7 @@ module BranchingCleaner
     end
 
     def all_databases_from_server
-      @databases ||= connection.query('SELECT datname FROM pg_catalog.pg_database').flatten
+      connection.query('SELECT datname FROM pg_catalog.pg_database').flatten
     end
   end
 

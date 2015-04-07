@@ -21,6 +21,10 @@ module ActiveRecord
         def drop_database(database)
           true
         end
+
+        def query(sql)
+          [['my_project_development_feature'], ['my_project_test_feature'], ['my_project_development_feature_2']]
+        end
       end
 
     end
