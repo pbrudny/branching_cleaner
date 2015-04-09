@@ -15,7 +15,7 @@ module BranchingCleaner
     end
 
     def databases_except_master(env)
-      all_project_databases(env) - ["#{db_core_name}_#{env}_master"]
+      all_project_databases(env) - ["#{db_core_name}#{env}_master"]
     end
 
     def all_project_databases(env)

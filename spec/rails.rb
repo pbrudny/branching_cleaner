@@ -19,7 +19,7 @@ class Rails
         'pool' => 5,
         'username' => 'foouser',
         'password' => 'barpassword',
-        'database' => 'validations_production'
+        'database' => 'my_project_development_feature_branch'
       }
     end
   end

@@ -2,6 +2,15 @@ module ActiveRecord
   module Tasks
 
     class PostgreSQLDatabaseTasks
+      class Connection
+        def drop_database(database)
+          true
+        end
+
+        def query(sql)
+          [['my_project_development_feature'], ['my_project_test_feature'], ['another_development_feature']]
+        end
+      end
 
       def initialize(configuration)
         @configuration = configuration
@@ -16,18 +25,6 @@ module ActiveRecord
       def establish_master_connection
         true
       end
-
-      class Connection
-        def drop_database(database)
-          true
-        end
-
-        def query(sql)
-          [['my_project_development_feature'], ['my_project_test_feature'], ['my_project_development_feature_2']]
-        end
-      end
-
     end
-
   end
 end
